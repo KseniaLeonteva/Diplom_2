@@ -55,8 +55,8 @@ def get_token():
 
 
 @allure.step('Удаление пользователя')
-def delete_user():
-    token = get_token()
+def delete_user(token):
+    # token = get_token()
     headers = {"Authorization": token}
     r = requests.delete(Endpoint.DATA_CHANGE, headers=headers)
 

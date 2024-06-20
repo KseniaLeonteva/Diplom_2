@@ -12,6 +12,7 @@ class TestOrderList:
         list = get_order_list(token)
         assert list.status_code == 200
         assert list.json()['success'] is True
+        delete_user(token)
 
 
     @allure.step('Получение заказов НЕавторизованным пользователем')

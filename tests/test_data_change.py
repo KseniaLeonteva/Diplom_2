@@ -12,6 +12,7 @@ class TestDataChange:
         r = change_data_user(token)
         assert r.status_code == 200
         assert r.json()['success'] is True
+        delete_user(token)
 
 
     @allure.step('Изменение почты и пароля НЕавторизованного пользователя')
